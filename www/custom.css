@@ -1,0 +1,57 @@
+<style>
+	body{
+		font: 12px "San Francisco", Helvetica, Arial, sans-serif;
+		background: #fff7f7;
+		margin: 2em auto 4em auto;
+		position: relative;
+		text-align: justify;
+	}
+	#parent{
+		width: 1200px;
+		margin: auto;
+	}
+	#chart{
+		text-align: center;
+		display:inline-block;
+		float: left;
+		overflow: hidden;
+		position: relative;
+	}
+	#wheelButton{
+		margin-bottom: 40px;
+		width: 160px;
+		height: 35px;
+	}
+	#content{
+		margin: 20px;
+		overflow: hidden;
+		position: relative;
+		border-radius: 7px;
+		background: white;
+		padding: 20px;
+		height: 700px;
+		box-shadow: 1px 0.5px 4px 0.5px rgba(0,0,0,0.75);
+	}
+	.sliceArc{
+		fill: white;
+		stroke: #aaaaaa;
+	}
+
+	.sliceText{
+		fill: white;
+		font-size: 18px;
+		font-family: 'Courgette', sans-serif;
+	}
+	#results {
+		text-align: center;
+		fill: black;
+		font-size: 30px;
+		font-family: 'Courgette', sans-serif;
+	}
+	#datahack{
+		display: none;
+	}
+	#resultIMG{
+		width: 100%;
+	}
+</style>
