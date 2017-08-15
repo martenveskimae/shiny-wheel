@@ -57,26 +57,26 @@ Shiny.addCustomMessageHandler("jsondata", function(message){
 	update(spinData);
 	function update(source){
 		var t = d3.transition()
-    	.duration(750);
+    	        .duration(750);
 
-    	var arcs = g.selectAll(".sliceArc")
+    		var arcs = g.selectAll(".sliceArc")
 		.data(pie(source), function(d,i) { return i; });
 
 		var text = g.selectAll(".sliceText")
 		.data(source, function(d,i){ return i; });
 
 		arcs.exit()
-    	.transition(t)
-      	.style("fill-opacity", 1e-6)
-      	.remove();
+    		.transition(t)
+      		.style("fill-opacity", 1e-6)
+      		.remove();
 
-      	text.exit()
-      	.transition(t)
-      	.style("fill-opacity", 1e-6)
-      	.remove();
+      		text.exit()
+      		.transition(t)
+      		.style("fill-opacity", 1e-6)
+      		.remove();
 
-      	arcs.transition(t)
-      	.style("fill", function(d,i) { return colorScale(i); })
+      		arcs.transition(t)
+      		.style("fill", function(d,i) { return colorScale(i); })
 		.attr("id", function(d,i) { return "sliceArc_"+i; })
 		.attr("d", arc);
 
@@ -111,7 +111,7 @@ Shiny.addCustomMessageHandler("jsondata", function(message){
 	circleradius = 2.2,
 	n = (Math.PI * 2 * arcradius) / (circleradius*10);
 
-	for(i=0; i<n; i++){
+	for(var i=0; i<n; i++){
 		var ang = (Math.PI * 2 * i) / n,
 		cx = arcradius * Math.sin(ang),
 		cy = arcradius * Math.cos(ang);
@@ -153,7 +153,7 @@ Shiny.addCustomMessageHandler("jsondata", function(message){
 
 	var selectedSlice = function(){
 		topDeed = [];
-		for(i=0; i<dataframe.deeds.length; i++){
+		for(var i=0; i<dataframe.deeds.length; i++){
 			var sliceRect = document.getElementById("sliceArc_"+i).getBoundingClientRect(),
 			textRectCenterX = (sliceRect.right + sliceRect.left) / 2,
 			textRectCenterY = (sliceRect.bottom + sliceRect.top) / 2,
