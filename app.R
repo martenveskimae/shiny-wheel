@@ -34,7 +34,7 @@ server = function(input, output, session){
   
   update = eventReactive(input$deeds.nr,{
      filtered.df = df[1:input$deeds.nr,]
-     session$sendCustomMessage(type="jsondata", filtered.df)
+     session$sendCustomMessage(type="df", filtered.df)
    })
   
   output$spinner = renderUI({
