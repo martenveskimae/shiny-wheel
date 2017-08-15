@@ -152,7 +152,7 @@ Shiny.addCustomMessageHandler("jsondata", function(message){
 	pointerRectCenterY = (pointerRect.bottom + pointerRect.top) / 2;
 
 	var selectedSlice = function(){
-		topDeed = [];
+		topDeed = new Array;
 		for(let i=0; i<dataframe.deeds.length; i++){
 			var sliceRect = document.getElementById("sliceArc_"+i).getBoundingClientRect(),
 			textRectCenterX = (sliceRect.right + sliceRect.left) / 2,
