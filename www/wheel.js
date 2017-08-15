@@ -29,7 +29,7 @@ function init(){
 
 }
 
-Shiny.addCustomMessageHandler("jsondata", function(message){
+Shiny.addCustomMessageHandler("df", function(message){
 
 	////////////////////////////////////////////////////////////
 	//////////////////////// Data //////////////////////////////
