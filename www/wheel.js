@@ -111,7 +111,7 @@ Shiny.addCustomMessageHandler("jsondata", function(message){
 	circleradius = 2.2,
 	n = (Math.PI * 2 * arcradius) / (circleradius*10);
 
-	for(var i=0; i<n; i++){
+	for(let i=0; i<n; i++){
 		var ang = (Math.PI * 2 * i) / n,
 		cx = arcradius * Math.sin(ang),
 		cy = arcradius * Math.cos(ang);
@@ -153,7 +153,7 @@ Shiny.addCustomMessageHandler("jsondata", function(message){
 
 	var selectedSlice = function(){
 		topDeed = [];
-		for(var i=0; i<dataframe.deeds.length; i++){
+		for(let i=0; i<dataframe.deeds.length; i++){
 			var sliceRect = document.getElementById("sliceArc_"+i).getBoundingClientRect(),
 			textRectCenterX = (sliceRect.right + sliceRect.left) / 2,
 			textRectCenterY = (sliceRect.bottom + sliceRect.top) / 2,
