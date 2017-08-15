@@ -36,7 +36,7 @@ Shiny.addCustomMessageHandler("df", function(message){
 	////////////////////////////////////////////////////////////
 
 	var dataframe = message,
-	spinData = new Array;
+	spinData = [];
 
 	dataframe.deeds.forEach(function(d,i) {
 		u = 360/dataframe.deeds.length;
@@ -152,7 +152,7 @@ Shiny.addCustomMessageHandler("df", function(message){
 	pointerRectCenterY = (pointerRect.bottom + pointerRect.top) / 2;
 
 	var selectedSlice = function(){
-		topDeed = new Array;
+		topDeed = [];
 		for(let i=0; i<dataframe.deeds.length; i++){
 			var sliceRect = document.getElementById("sliceArc_"+i).getBoundingClientRect(),
 			textRectCenterX = (sliceRect.right + sliceRect.left) / 2,
