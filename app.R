@@ -22,7 +22,7 @@ ui = fluidPage(
   
   h2("Shiny Wheels"),
   sliderInput("deeds.nr", "Number of deeds:", min = 1, max = 12, value = 6),
-  HTML(paste("<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+  HTML(paste("<link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
               <button id='wheelButton' onclick='spin()'>Spin</button>
               <div id='wheel'></div>
               <div id='results' style='width: 700px'></div>
